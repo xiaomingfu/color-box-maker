@@ -7,7 +7,7 @@ class Box extends Component{
         <div>
             <div className="Box" style={Box}>
             </div>
-            <button>X</button>
+            <button onClick={this.props.removeBox}>X</button>
         </div>
         );
     }
