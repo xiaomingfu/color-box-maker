@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './Box.css';
 
 class Box extends Component{
     render(){
@@ -7,7 +8,7 @@ class Box extends Component{
         <div>
             <div className="Box" style={Box}>
             </div>
-            <button onClick={this.props.removeBox}>X</button>
+            <button onClick={this.props.removeBox}>Remove the box!</button>
         </div>
         );
     }
