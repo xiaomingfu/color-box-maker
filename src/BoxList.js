@@ -5,29 +5,22 @@ import BoxForm from './BoxForm';
 class BoxList extends Component {
     constructor(props){
         super(props);
-        this.remove = this.remove.bind(this);
-
-    }
-   
-    remove(){
-        this.setState({
-            height: "",
-            width: "",
-            backgroundColor: "",
-        });
+        this.state = {boxes: [{width: 10, height: 40, backgroundColor: 'orange'}]};
     }
     render() {
+        const boxes = this.state.boxes.map(box => (
+            <Box
+            width={box.width}
+            height={box.height}
+            backgroundColor={box.backgroundColor}
+            />
+        ));
         return (
             <div>
                 <h1>Box Maker Thingy</h1>
-                <BoxForm addBox={this.addBox}/>
-                
-                <button onClick={this.remove}>Remove The Box!</button>
+                {boxes} 
             </div>
-
         )
-
-
     }
 }
 
